@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pastoral Installation Tributes</title>
+<meta name="description" content="Send a message of congratulations or reserve an ad for the pastoral installation of Reverend Larry Johnson at The Rock of Truth Baptist Church, Oakland.">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: formal, warm, celebratory — a church program book, not a web app
+   IDEA: the tribute order form tucked inside a souvenir installation program
+   PICTURE: the form itself, in one calm column under a burgundy crest band
+   COLOUR and TYPE: burgundy #700820 field, gold #F5C445 accent, green #307028 support, cream ground; Playfair Display + Poppins
+   LAYOUT: full-bleed crest band, single 640px column, committee table below for editors */
+:root{color-scheme:light dark;
+--bg:light-dark(#F3ECE6,#1a0d10);--card:light-dark(#fffaf6,#26151a);--ink:light-dark(#1E1E1E,#f3ece6);--soft:light-dark(#5d4a4e,#c9b7ba);
+--line:light-dark(#dccdc4,#4a3036);--burg:#700820;--ox:light-dark(#400010,#f0c9d1);--green:light-dark(#307028,#7fc276);--gold:#F5C445;--err:light-dark(#a3122e,#ff8fa3)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Poppins,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.1;text-wrap:balance;margin:0}
+.crest{background:var(--burg);color:#F3ECE6;padding:clamp(24px,4vw,48px) max(5vw,16px);border-bottom:6px solid var(--gold);position:relative;overflow:hidden}
+.crest::after{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(245,196,69,.28),transparent 65%)}
+.crest .in{max-width:760px;margin:0 auto;display:flex;gap:24px;align-items:center;position:relative;z-index:1}
+.logo{flex:none;width:112px;height:112px;border-radius:18px;background:#F3ECE6;border:3px solid var(--gold);overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+.logo img{width:100%;height:100%;object-fit:cover;transform:scale(1.12)}
+.crest h1{font-size:clamp(30px,5vw,44px);color:#fff}
+.crest p{margin:8px 0 0;color:#f0d9dd;max-width:52ch}
+.crest .k{font-size:14px;color:var(--gold);font-weight:500;margin-bottom:6px}
+main{max-width:760px;margin:0 auto;padding:clamp(24px,4vw,44px) max(5vw,16px) 64px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,3vw,32px);box-shadow:0 2px 10px rgba(64,0,16,.06)}
+.choose{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin:0 0 24px;border:0;padding:0}
+.choose legend{font-weight:600;margin-bottom:10px;font-size:17px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0}
+.opt label{display:block;height:100%;padding:16px 16px 16px 52px;border:2px solid var(--line);border-radius:14px;cursor:pointer;background:var(--card);transition:border-color .15s,background .15s}
+.opt label b{display:block;font-family:"Playfair Display",serif;font-size:20px;color:var(--ox)}
+.opt label span{font-size:14px;color:var(--soft)}
+.opt label::before{content:"";position:absolute;left:18px;top:20px;width:20px;height:20px;border-radius:50%;border:2px solid var(--soft)}
+.opt input:checked+label{border-color:var(--burg);background:light-dark(#f8e9ec,#3a1820)}
+.opt input:checked+label::before{border-color:var(--burg);background:var(--burg);box-shadow:inset 0 0 0 4px var(--card)}
+.opt input:focus-visible+label{outline:3px solid var(--gold);outline-offset:2px}
+h2{font-size:26px;color:var(--ox);margin-bottom:4px}
+.sub{color:var(--soft);margin:0 0 20px;font-size:15px}
+.f{margin-bottom:18px}
+.f>label,.f>.lab{display:block;font-weight:500;margin-bottom:6px}
+.req{color:var(--err)}
+.hint{font-size:13px;color:var(--soft);margin-top:4px}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;font:16px Poppins,system-ui,sans-serif;color:var(--ink);background:light-dark(#fff,#1d0f13);border:1.5px solid var(--line);border-radius:10px;padding:11px 13px;min-height:46px}
+textarea{min-height:150px;resize:vertical;line-height:1.5}
+input:focus,select:focus,textarea:focus{outline:3px solid color-mix(in srgb,var(--gold) 70%,transparent);border-color:var(--burg)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.sizes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.sz strong{font-size:17px;color:var(--ox)}
+.colors{display:flex;flex-wrap:wrap;gap:10px}.colors label{display:flex;align-items:center;gap:8px;border:2px solid var(--line);border-radius:999px;padding:8px 16px;min-height:44px;cursor:pointer;font-size:15px}.colors input{width:18px;height:18px;accent-color:var(--burg)}.colors label:has(input:checked){border-color:var(--burg);background:light-dark(#f8e9ec,#3a1820)}
+.sz input{position:absolute;opacity:0}
+.sz{position:relative}
+.sz label{display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 6px;border:2px solid var(--line);border-radius:12px;cursor:pointer;font-size:14px;text-align:center;min-height:44px}
+.sz i{display:block;width:44px;height:58px;border:1.5px solid var(--soft);border-radius:3px;position:relative;background:var(--card)}
+.sz i::after{content:"";position:absolute;left:3px;top:3px;background:var(--green);opacity:.75;border-radius:1px}
+.sz.full i::after{right:3px;bottom:3px}.sz.half i::after{right:3px;height:24px}.sz.quarter i::after{width:17px;height:24px}.sz.bc i::after{width:17px;height:11px}
+.sz input:checked+label{border-color:var(--burg);background:light-dark(#f8e9ec,#3a1820)}
+.sz input:focus-visible+label{outline:3px solid var(--gold);outline-offset:2px}
+.count{font-size:13px;color:var(--soft);text-align:right;margin-top:4px}.count.over{color:var(--err);font-weight:600}
+.drop{border:2px dashed var(--line);border-radius:12px;padding:18px;text-align:center;color:var(--soft);font-size:15px}
+.drop.on{border-color:var(--green);background:color-mix(in srgb,var(--green) 8%,transparent)}
+.drop input{display:block;margin:10px auto 0;font-size:14px;max-width:100%}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.chk input{width:20px;height:20px;margin-top:3px;accent-color:var(--burg);flex:none}
+.err{color:var(--err);font-size:13px;margin-top:4px;display:none}
+.f.bad .err{display:block}.f.bad input,.f.bad textarea,.f.bad select{border-color:var(--err)}
+.btn{font:600 16px Poppins,sans-serif;border:0;border-radius:999px;padding:13px 28px;min-height:48px;cursor:pointer;background:var(--burg);color:#fff;box-shadow:0 4px 0 #400010}
+.btn:hover{filter:brightness(1.12)}.btn:active{transform:translateY(2px);box-shadow:0 2px 0 #400010}
+.btn:focus-visible,.ghost:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn[disabled]{opacity:.6;cursor:wait}
+.ghost{font:500 15px Poppins,sans-serif;background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:999px;padding:9px 18px;min-height:44px;cursor:pointer}
+.actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.note{font-size:13px;color:var(--soft)}
+.done{display:none;text-align:center}
+.done.show{display:block;animation:rise .4s ease-out}
+.seal{width:72px;height:72px;margin:0 auto 14px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:var(--burg);font-size:34px;font-weight:700;box-shadow:0 0 0 6px color-mix(in srgb,var(--gold) 30%,transparent)}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.done.show{animation:none}}
+.fallback{display:none;margin-top:16px;text-align:left}.fallback.show{display:block}
+.fallback pre{white-space:pre-wrap;background:light-dark(#fff,#1d0f13);border:1px solid var(--line);border-radius:10px;padding:12px;font-size:14px;max-height:260px;overflow:auto}
+section.mine,section.admin{margin-top:36px}
+section h3{font-size:22px;color:var(--ox);margin-bottom:12px}
+.entry{border-top:1px solid var(--line);padding:14px 0;display:flex;gap:12px;justify-content:space-between;align-items:flex-start}
+.entry:first-of-type{border-top:0}
+.tag{display:inline-block;font-size:12px;font-weight:600;border-radius:999px;padding:2px 10px;margin-right:6px;white-space:nowrap}
+.tag.msg{background:color-mix(in srgb,var(--green) 18%,transparent);color:var(--green)}
+.tag.ad{background:color-mix(in srgb,var(--gold) 30%,transparent);color:light-dark(#6b4c00,var(--gold))}
+.entry p{margin:6px 0 0;font-size:15px;color:var(--soft);white-space:pre-wrap;overflow-wrap:anywhere}
+.small{font-size:13px;color:var(--soft)}
+.admin .bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.stat{font-size:15px;margin-right:auto}.stat b{font-size:22px;font-family:"Playfair Display",serif;color:var(--ox)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-weight:600;border-bottom:2px solid var(--line);padding:8px 6px}
+td{border-bottom:1px solid var(--line);padding:9px 6px;vertical-align:top;overflow-wrap:anywhere}
+td a{color:var(--green)}
+.hide{display:none!important}
+.info{border:1.5px solid var(--line);border-left:5px solid var(--green);border-radius:12px;padding:14px 16px;margin:0 0 18px;background:light-dark(#f6f1e9,#21141a);font-size:15px}
+.info.pay{border-left-color:var(--gold)}
+.info h4{margin:0 0 8px;font:600 16px Poppins,sans-serif;color:var(--ox)}
+.info ul{margin:0;padding-left:20px}.info li{margin:4px 0}
+.info .num{white-space:nowrap;font-weight:600}
+.sz em{font-style:normal;font-size:12px;color:var(--soft);white-space:nowrap}
+.done .info{text-align:left;margin-top:18px}
+.sampleflag{font-size:13px;color:var(--soft);margin-top:10px}
+.scroll{overflow-x:auto}
+@media(max-width:600px){.crest .in{flex-direction:column;align-items:flex-start;gap:14px}.logo{width:84px;height:84px}
+.choose,.two{grid-template-columns:minmax(0,1fr)}.sizes{grid-template-columns:repeat(3,minmax(0,1fr))}
+table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:7em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:6.5em;margin-inline-start:-7em;font-weight:600;white-space:normal}.stack td:empty{display:none}}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+<header class="crest"><div class="in">
+  <div class="logo"><img alt="The Rock of Truth crest" src="logo.jpg"></div>
+  <div>
+    <div class="k">The Rock of Truth Baptist Church · Oakland</div>
+    <h1>Pastoral Installation Tributes</h1>
+    <p>Celebrate our Pastor-Elect, Reverend Larry Johnson, with a message of congratulations, or reserve an ad in the installation program book.</p>
+  </div>
+</div></header>
+
+<main>
+<div class="card" id="formCard">
+<form id="form" novalidate>
+  <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="website">Leave this empty</label><input type="text" id="website" tabindex="-1" autocomplete="off"></div>
+  <fieldset class="choose">
+    <legend>What would you like to submit?</legend>
+    <div class="opt"><input type="radio" name="kind" id="kMsg" value="message" checked><label for="kMsg"><b>A message</b><span>A few words of congratulations to share with the pastor</span></label></div>
+    <div class="opt"><input type="radio" name="kind" id="kAd" value="ad"><label for="kAd"><b>A program ad</b><span>A business, family or ministry ad for the program book</span></label></div>
+  </fieldset>
+
+  <div id="msgPart">
+    <h2>Message of congratulations</h2>
+    <p class="sub">Messages may be read aloud, printed in the program, or presented to the pastor.</p>
+    <div class="f"><label for="mFrom">Your name or names <span class="req">*</span></label>
+      <input type="text" id="mFrom" autocomplete="name" placeholder="e.g. Deacon & Sis. Robert Hayes"><div class="err">Please tell us who the message is from.</div></div>
+    <div class="f"><label for="mGroup">You are writing as</label>
+      <select id="mGroup"><option>An individual</option><option>A family</option><option>A ministry or auxiliary</option><option>A church or pastor</option><option>A business or organization</option></select></div>
+    <div class="f"><label for="mText">Your message <span class="req">*</span></label>
+      <textarea id="mText" placeholder="Congratulations, Pastor! Thank you for your faithful leadership…"></textarea>
+      <div class="count" id="mCount">0 / 150 words</div><div class="err">Please write a message of 150 words or fewer.</div></div>
+    <div class="f"><label for="mSign">Sign it as <span class="small">(optional)</span></label>
+      <input type="text" id="mSign" placeholder="e.g. With love, the Hayes Family"><div class="hint">Leave blank to use your name as written above.</div></div>
+  </div>
+
+  <div id="adPart" class="hide">
+    <h2>Program book ad</h2>
+    <p class="sub">Choose a size and send your artwork, or give us the wording and we'll lay it out for you.</p>
+    <div class="info"><h4>Ad specifications</h4><ul>
+      <li>Accepted files: PDF, Word, Photoshop, Illustrator, JPEG or PNG.</li>
+      <li>Ads may be full color or black and white.</li>
+      <li>Prices: full page <b>$100</b>, half page <b>$50</b>, quarter page <b>$25</b>.</li>
+      <li>Program pages are 8.5 × 11 in with a 0.5 in margin all around, so the printable area for a full page is <span class="num">7.5 in wide × 10 in tall</span>.</li>
+    </ul></div>
+    <div class="f"><label for="aName">Business, family or ministry name <span class="req">*</span></label>
+      <input type="text" id="aName" autocomplete="organization"><div class="err">Please enter the name for the ad.</div></div>
+    <div class="f"><span class="lab">Ad size <span class="req">*</span></span>
+      <div class="sizes" role="radiogroup" aria-label="Ad size">
+        <div class="sz full"><input type="radio" name="size" id="s1" value="Full page"><label for="s1"><i></i>Full page<em>7.5 × 10 in</em><strong>$100</strong></label></div>
+        <div class="sz half"><input type="radio" name="size" id="s2" value="Half page"><label for="s2"><i></i>Half page<em>7.5 × 5 in</em><strong>$50</strong></label></div>
+        <div class="sz quarter"><input type="radio" name="size" id="s3" value="Quarter page"><label for="s3"><i></i>Quarter page<em>3.75 × 5 in</em><strong>$25</strong></label></div>
+      </div><div class="err">Please choose an ad size.</div></div>
+    <div class="f"><span class="lab">Print in <span class="req">*</span></span>
+      <div class="colors" role="radiogroup" aria-label="Print in"><label><input type="radio" name="color" id="c1" value="Full color"> Full color</label><label><input type="radio" name="color" id="c2" value="Black and white"> Black and white</label></div>
+      <div class="hint">Same price either way.</div><div class="err">Please choose color or black and white.</div></div>
+    <div class="f"><span class="lab">Artwork</span>
+      <div class="drop" id="drop">Drop your finished ad here (PDF, Word, Photoshop, Illustrator, JPEG or PNG, up to 10 MB)
+        <input type="file" id="aFile" accept=".pdf,.doc,.docx,.psd,.ai,.eps,.jpg,.jpeg,.png,image/jpeg,image/png,application/pdf"></div>
+      <div class="hint" id="fileNote">No artwork yet? Leave this empty and write your wording below.</div></div>
+    <div class="f"><label for="aCopy">Ad wording or design notes</label>
+      <textarea id="aCopy" placeholder="Headline, congratulations line, business name, address, phone, website…"></textarea>
+      <div class="err">Please upload artwork or write the wording for your ad.</div></div>
+    <div class="info pay"><h4>How to pay for your ad</h4><ul>
+      <li><b>Zelle:</b> send to <span class="num">510-843-0665</span></li>
+      <li><b>Check:</b> payable to <i>Rock of Truth Baptist Church</i>, mailed to 459 61st Street, Oakland, CA 94609</li>
+      <li><b>In person:</b> drop off your check on Sundays, <span class="num">10 am – 12:30 pm</span></li>
+    </ul></div>
+    <div class="f"><label class="chk"><input type="checkbox" id="aAgree"> I will pay <b id="agreeAmt">for my ad</b> by Zelle or check, and I understand my ad will be printed once payment is received.</label>
+      <div class="err">Please check this box to continue.</div></div>
+  </div>
+
+  <h2 style="font-size:20px;margin:26px 0 12px">Your contact details</h2>
+  <div class="two">
+    <div class="f" id="fEmail"><label for="cEmail">Email <span class="req">*</span></label><input type="email" id="cEmail" autocomplete="email"><div class="err">Please enter a valid email.</div></div>
+    <div class="f"><label for="cPhone">Phone</label><input type="tel" id="cPhone" autocomplete="tel"></div>
+  </div>
+  <div class="f hide" id="fContact"><label for="cName">Contact person <span class="req">*</span></label><input type="text" id="cName" autocomplete="name"><div class="err">Please tell us who to contact.</div></div>
+  <p class="note">Your contact details go only to the installation committee.</p>
+
+  <div class="actions">
+    <button class="btn" type="submit" id="go">Submit message</button>
+    <span class="note" id="status" role="status"></span>
+  </div>
+</form>
+
+<div class="done" id="done">
+  <div class="seal">✓</div>
+  <h2 id="doneTitle">Thank you!</h2>
+  <p class="sub" id="doneText">Your submission has been received by the installation committee.</p>
+  <div class="hide" id="donePay"><div class="info pay"><h4>Next step: payment</h4><ul>
+      <li><b>Zelle:</b> send to <span class="num">510-843-0665</span></li>
+      <li><b>Check:</b> payable to <i>Rock of Truth Baptist Church</i>, mailed to 459 61st Street, Oakland, CA 94609</li>
+      <li><b>In person:</b> drop off your check on Sundays, <span class="num">10 am – 12:30 pm</span></li>
+    </ul></div></div>
+  <div class="fallback" id="fallback">
+    <p class="small">We couldn't send this online. Please copy it and send it to the church office or installation committee.</p>
+    <pre id="fbText"></pre>
+    <button class="ghost" type="button" id="copyFb">Copy text</button>
+  </div>
+  <div class="actions" style="justify-content:center;margin-top:18px"><button class="btn" type="button" id="again">Submit another</button></div>
+</div>
+</div>
+
+<p class="small" style="text-align:center;margin-top:28px">Questions? Contact the Rock of Truth Baptist Church office.</p>
+</main>
+<script>
+{
+/* ===== SETTINGS =====
+   SCRIPT_URL: paste the Web app URL from Apps Script (Deploy > Manage deployments).
+   OFFICE_EMAIL: optional. Shown to people whose artwork file is too large to upload. */
+const SCRIPT_URL='https://script.google.com/macros/s/AKfycbzlSqzHWrR50brgnna3zrkkk7t9W-yFD4sz2DKB5w0cElhT7PB1RLDY1Zi0oJKxZA/exec';
+const OFFICE_EMAIL='';
+/* ==================== */
+
+const $=id=>document.getElementById(id);
+const MAXW=150,MAXMB=10;
+const PRICE={'Full page':100,'Half page':50,'Quarter page':25};
+let busy=false,file=null;
+const kind=()=>document.querySelector('input[name=kind]:checked').value;
+const words=t=>(t.trim().match(/\S+/g)||[]).length;
+const tooBigMsg=()=>'That file is over '+MAXMB+' MB. Submit the form without it'+(OFFICE_EMAIL?' and email the file to '+OFFICE_EMAIL:', and the committee will contact you to collect it')+'.';
+
+function setKind(){
+  const ad=kind()==='ad';
+  $('msgPart').classList.toggle('hide',ad);$('adPart').classList.toggle('hide',!ad);$('fContact').classList.toggle('hide',!ad);
+  $('go').textContent=ad?'Submit ad request':'Submit message';
+}
+document.querySelectorAll('input[name=kind]').forEach(r=>r.addEventListener('change',setKind));
+document.querySelectorAll('input[name=size]').forEach(r=>r.addEventListener('change',()=>{$('agreeAmt').textContent='$'+PRICE[r.value]+' for my '+r.value.toLowerCase()+' ad'}));
+$('mText').addEventListener('input',()=>{const n=words($('mText').value);$('mCount').textContent=n+' / '+MAXW+' words';$('mCount').classList.toggle('over',n>MAXW)});
+
+const drop=$('drop');
+['dragover','dragenter'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.add('on')}));
+['dragleave','drop'].forEach(e=>drop.addEventListener(e,()=>drop.classList.remove('on')));
+drop.addEventListener('drop',ev=>{ev.preventDefault();const f=ev.dataTransfer.files[0];if(f)pick(f)});
+$('aFile').addEventListener('change',()=>{const f=$('aFile').files[0];if(f)pick(f)});
+function pick(f){
+  if(f.size>MAXMB*1024*1024){$('fileNote').textContent=tooBigMsg();file=null;$('aFile').value='';return}
+  file=f;$('fileNote').textContent='Attached: '+f.name+' ('+Math.max(1,Math.round(f.size/1024))+' KB)';
+}
+
+function bad(id,on){const f=$(id).closest('.f');f.classList.toggle('bad',on);return on}
+function validate(){
+  let first=null;const chk=(id,cond)=>{if(bad(id,cond)&&!first)first=$(id)};
+  document.querySelectorAll('.f.bad').forEach(f=>f.classList.remove('bad'));
+  if(kind()==='message'){
+    chk('mFrom',!$('mFrom').value.trim());
+    const n=words($('mText').value);chk('mText',n===0||n>MAXW);
+  }else{
+    chk('aName',!$('aName').value.trim());
+    if(!document.querySelector('input[name=size]:checked')){$('s1').closest('.f').classList.add('bad');if(!first)first=$('s1')}
+    if(!document.querySelector('input[name=color]:checked')){$('c1').closest('.f').classList.add('bad');if(!first)first=$('c1')}
+    chk('aCopy',!file&&!$('aCopy').value.trim());
+    chk('aAgree',!$('aAgree').checked);
+    chk('cName',!$('cName').value.trim());
+  }
+  chk('cEmail',!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('cEmail').value.trim()));
+  if(first){first.focus();first.scrollIntoView({block:'center',behavior:'smooth'})}
+  return !first;
+}
+
+function collect(){
+  const e={kind:kind(),email:$('cEmail').value.trim(),phone:$('cPhone').value.trim(),website:$('website').value};
+  if(e.kind==='message')Object.assign(e,{from:$('mFrom').value.trim(),group:$('mGroup').value,text:$('mText').value.trim(),sign:$('mSign').value.trim()});
+  else{const size=document.querySelector('input[name=size]:checked').value;
+    Object.assign(e,{from:$('aName').value.trim(),contact:$('cName').value.trim(),size,price:PRICE[size],color:document.querySelector('input[name=color]:checked').value,copy:$('aCopy').value.trim(),fileName:file?file.name:''})}
+  return e;
+}
+function asText(e){
+  const L=[e.kind==='ad'?'PROGRAM AD REQUEST':'MESSAGE OF CONGRATULATIONS','From: '+e.from];
+  if(e.kind==='message'){L.push('Writing as: '+e.group,'','Message:',e.text);if(e.sign)L.push('Signed: '+e.sign)}
+  else{L.push('Contact person: '+e.contact,'Ad size: '+e.size+' ($'+e.price+')','Print in: '+e.color);if(e.fileName)L.push('Artwork file: '+e.fileName+' (please attach it)');if(e.copy)L.push('','Wording / notes:',e.copy);
+    L.push('','Payment: Zelle 510-843-0665, or check payable to Rock of Truth Baptist Church, 459 61st Street, Oakland, CA 94609 (or drop off Sundays 10am-12:30pm)')}
+  L.push('','Email: '+e.email);if(e.phone)L.push('Phone: '+e.phone);return L.join('\n');
+}
+const readB64=f=>new Promise((ok,no)=>{const r=new FileReader();r.onload=()=>ok(String(r.result).split(',')[1]||'');r.onerror=()=>no(r.error);r.readAsDataURL(f)});
+
+$('form').addEventListener('submit',async ev=>{
+  ev.preventDefault();if(busy||!validate())return;
+  busy=true;$('go').disabled=true;$('status').textContent=file&&kind()==='ad'?'Uploading your artwork… this can take a minute':'Sending…';
+  const e=collect();let sent=false;
+  try{
+    const payload={...e};
+    if(e.kind==='ad'&&file)payload.file={name:file.name,type:file.type||'application/octet-stream',data:await readB64(file)};
+    if(!/^https:\/\/script\.google\.com\//.test(SCRIPT_URL))throw new Error('Form is not connected yet');
+    const r=await fetch(SCRIPT_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
+    const j=await r.json().catch(()=>({}));
+    sent=!!j.ok;
+  }catch(x){console.error(x)}
+  finally{busy=false;$('go').disabled=false;$('status').textContent=''}
+  showDone(e,sent);
+});
+
+function showDone(e,sent){
+  $('form').classList.add('hide');$('done').classList.add('show');
+  $('doneTitle').textContent=sent?'Thank you!':'Almost there';
+  $('doneText').textContent=sent?(e.kind==='ad'?'Your ad request has been received. Please send your $'+e.price+' payment using the details below.':'Your message of congratulations has been received by the installation committee.'):'Your submission is ready below.';
+  $('fallback').classList.toggle('show',!sent);$('donePay').classList.toggle('hide',e.kind!=='ad');$('fbText').textContent=sent?'':asText(e);
+  $('done').scrollIntoView({block:'start',behavior:'smooth'});
+}
+$('again').addEventListener('click',()=>{
+  $('form').reset();file=null;$('agreeAmt').textContent='for my ad';$('fileNote').textContent='No artwork yet? Leave this empty and write your wording below.';
+  $('mCount').textContent='0 / '+MAXW+' words';$('mCount').classList.remove('over');setKind();
+  $('done').classList.remove('show');$('form').classList.remove('hide');$('formCard').scrollIntoView({block:'start',behavior:'smooth'});
+});
+$('copyFb').addEventListener('click',async ev=>{
+  const b=ev.currentTarget;
+  try{await navigator.clipboard.writeText($('fbText').textContent);b.textContent='Copied';setTimeout(()=>b.textContent='Copy text',1600)}
+  catch(x){const s=getSelection(),rg=document.createRange();rg.selectNodeContents($('fbText'));s.removeAllRanges();s.addRange(rg);b.textContent='Text selected — copy it now'}
+});
+setKind();
+}
+</script>
+</body>
+</html>
