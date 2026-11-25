@@ -109,6 +109,8 @@ td a{color:var(--green)}
 .sz em{font-style:normal;font-size:12px;color:var(--soft);white-space:nowrap}
 .done .info{text-align:left;margin-top:18px}
 .sampleflag{font-size:13px;color:var(--soft);margin-top:10px}
+.deadline{display:inline-block;margin:-8px 0 20px;padding:6px 14px;border-radius:999px;background:color-mix(in srgb,var(--gold) 28%,transparent);color:var(--ox);font-size:15px}
+.contact{text-align:center;margin-top:32px;font-size:15px;color:var(--soft);line-height:1.7}.contact a{color:var(--ox);font-weight:500;overflow-wrap:anywhere}
 .scroll{overflow-x:auto}
 @media(max-width:600px){.crest .in{flex-direction:column;align-items:flex-start;gap:14px}.logo{width:84px;height:84px}
 .choose,.two{grid-template-columns:minmax(0,1fr)}.sizes{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -138,7 +140,8 @@ table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-bl
 
   <div id="msgPart">
     <h2>Message of congratulations</h2>
-    <p class="sub">Messages may be read aloud, printed in the program, or presented to the pastor.</p>
+    <p class="sub">We invite all members, families and friends to submit a brief congratulatory message to our newly elected pastor or the church, a favorite memory from your time here or with Pastor Johnson, a word of thanks to past and present leaders, or a piece of history about the church or Pastor Johnson&rsquo;s life.</p>
+    <p class="deadline">Submission deadline: <b>December 15, 2026</b></p>
     <div class="f"><label for="mFrom">Your name or names <span class="req">*</span></label>
       <input type="text" id="mFrom" autocomplete="name" placeholder="e.g. Deacon & Sis. Robert Hayes"><div class="err">Please tell us who the message is from.</div></div>
     <div class="f"><label for="mGroup">You are writing as</label>
@@ -153,6 +156,7 @@ table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-bl
   <div id="adPart" class="hide">
     <h2>Program book ad</h2>
     <p class="sub">Choose a size and send your artwork, or give us the wording and we'll lay it out for you.</p>
+    <p class="deadline">Ads range from <b>$25</b> to <b>$100</b>: quarter page $25 &middot; half page $50 &middot; full page $100</p>
     <div class="info"><h4>Ad specifications</h4><ul>
       <li>Accepted files: PDF, Word, Photoshop, Illustrator, JPEG or PNG.</li>
       <li>Ads may be full color or black and white.</li>
@@ -210,7 +214,7 @@ table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-bl
       <li><b>In person:</b> drop off your check on Sundays, <span class="num">10 am – 12:30 pm</span></li>
     </ul></div></div>
   <div class="fallback" id="fallback">
-    <p class="small">We couldn't send this online. Please copy it and send it to the church office or installation committee.</p>
+    <p class="small">We couldn't send this online. Please copy it and email it to Sister Jewel Hampton at jewelhampton88@gmail.com.</p>
     <pre id="fbText"></pre>
     <button class="ghost" type="button" id="copyFb">Copy text</button>
   </div>
@@ -218,7 +222,7 @@ table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-bl
 </div>
 </div>
 
-<p class="small" style="text-align:center;margin-top:28px">Questions? Contact the Rock of Truth Baptist Church office.</p>
+<footer class="contact">Questions? Contact Sister Jewel Hampton<br><a href="mailto:jewelhampton88@gmail.com">jewelhampton88@gmail.com</a> or <a href="tel:+15107355259" class="num">(510) 735-5259</a></footer>
 </main>
 <script>
 {
@@ -226,7 +230,7 @@ table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-bl
    SCRIPT_URL: paste the Web app URL from Apps Script (Deploy > Manage deployments).
    OFFICE_EMAIL: optional. Shown to people whose artwork file is too large to upload. */
 const SCRIPT_URL='https://script.google.com/macros/s/AKfycbzlSqzHWrR50brgnna3zrkkk7t9W-yFD4sz2DKB5w0cElhT7PB1RLDY1Zi0oJKxZA/exec';
-const OFFICE_EMAIL='';
+const OFFICE_EMAIL='jewelhampton88@gmail.com';
 /* ==================== */
 
 const $=id=>document.getElementById(id);
