@@ -185,6 +185,7 @@ table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-bl
       <li><b>Zelle:</b> send to <span class="num">510-843-0665</span></li>
       <li><b>Check:</b> payable to <i>Rock of Truth Baptist Church</i>, mailed to 459 61st Street, Oakland, CA 94609</li>
       <li><b>In person:</b> drop off your check on Sundays, <span class="num">10 am – 12:30 pm</span></li>
+      <li><b>Add a note with your payment</b> (the Zelle memo or your check&rsquo;s memo line) with the same <b>contact person</b> name you enter on this form, so we can match your payment to your ad.</li>
     </ul></div>
     <div class="f"><label class="chk"><input type="checkbox" id="aAgree"> I will pay <b id="agreeAmt">for my ad</b> by Zelle or check, and I understand my ad will be printed once payment is received.</label>
       <div class="err">Please check this box to continue.</div></div>
@@ -212,6 +213,7 @@ table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-bl
       <li><b>Zelle:</b> send to <span class="num">510-843-0665</span></li>
       <li><b>Check:</b> payable to <i>Rock of Truth Baptist Church</i>, mailed to 459 61st Street, Oakland, CA 94609</li>
       <li><b>In person:</b> drop off your check on Sundays, <span class="num">10 am – 12:30 pm</span></li>
+      <li><b>Add a note with your payment</b> (the Zelle memo or your check&rsquo;s memo line) with the contact person&rsquo;s name, <b id="payName">as entered on this form</b>, so we can match your payment to your ad.</li>
     </ul></div></div>
   <div class="fallback" id="fallback">
     <p class="small">We couldn't send this online. Please copy it and email it to Sister Jewel Hampton at jewelhampton88@gmail.com.</p>
@@ -291,7 +293,7 @@ function asText(e){
   const L=[e.kind==='ad'?'PROGRAM AD REQUEST':'MESSAGE OF CONGRATULATIONS','From: '+e.from];
   if(e.kind==='message'){L.push('Writing as: '+e.group,'','Message:',e.text);if(e.sign)L.push('Signed: '+e.sign)}
   else{L.push('Contact person: '+e.contact,'Ad size: '+e.size+' ($'+e.price+')','Print in: '+e.color);if(e.fileName)L.push('Artwork file: '+e.fileName+' (please attach it)');if(e.copy)L.push('','Wording / notes:',e.copy);
-    L.push('','Payment: Zelle 510-843-0665, or check payable to Rock of Truth Baptist Church, 459 61st Street, Oakland, CA 94609 (or drop off Sundays 10am-12:30pm)')}
+    L.push('','Payment: Zelle 510-843-0665, or check payable to Rock of Truth Baptist Church, 459 61st Street, Oakland, CA 94609 (or drop off Sundays 10am-12:30pm). Include a note with your payment with the contact person name: '+e.contact)}
   L.push('','Email: '+e.email);if(e.phone)L.push('Phone: '+e.phone);return L.join('\n');
 }
 const readB64=f=>new Promise((ok,no)=>{const r=new FileReader();r.onload=()=>ok(String(r.result).split(',')[1]||'');r.onerror=()=>no(r.error);r.readAsDataURL(f)});
@@ -316,7 +318,7 @@ function showDone(e,sent){
   $('form').classList.add('hide');$('done').classList.add('show');
   $('doneTitle').textContent=sent?'Thank you!':'Almost there';
   $('doneText').textContent=sent?(e.kind==='ad'?'Your ad request has been received. Please send your $'+e.price+' payment using the details below.':'Your message of congratulations has been received by the installation committee.'):'Your submission is ready below.';
-  $('fallback').classList.toggle('show',!sent);$('donePay').classList.toggle('hide',e.kind!=='ad');$('fbText').textContent=sent?'':asText(e);
+  $('fallback').classList.toggle('show',!sent);$('donePay').classList.toggle('hide',e.kind!=='ad');if(e.kind==='ad')$('payName').textContent=e.contact;$('fbText').textContent=sent?'':asText(e);
   $('done').scrollIntoView({block:'start',behavior:'smooth'});
 }
 $('again').addEventListener('click',()=>{
